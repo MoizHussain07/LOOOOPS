@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Countdown Loop</h1>
+
+<input placeholder="Enter a number" id="enter_a_number" />
+<button id="countdown_button">Start Countdown</button>
+<div id="table"></div>
+
+<script>
+  let numberInput = document.getElementById("enter_a_number")
+  let countdownBtn = document.getElementById("countdown_button")
+  let tableDiv = document.getElementById("table")
+  
+  let renderCountdown = () => {
+    let numberValue = parseInt(numberInput.value)
+    tableDiv.innerHTML = "" 
+    
+   
+    for (let x = numberValue; x >= 1; x--) {
+      let para = "<p>" + x + "</p>"
+      tableDiv.innerHTML += para
+    }
+  }
+  
+  countdownBtn.addEventListener("click", renderCountdown)
+</script>
+
+</body>
+</html>

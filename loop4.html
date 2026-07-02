@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Sum of Numbers Loop</h1>
+
+<input placeholder="Enter a number" id="enter_a_number" />
+<button id="sum_button">Show Sum</button>
+<div id="table"></div>
+
+<script>
+  let numberInput = document.getElementById("enter_a_number")
+  let sumBtn = document.getElementById("sum_button")
+  let tableDiv = document.getElementById("table")
+  
+  let renderSum = () => {
+    let numberValue = parseInt(numberInput.value)
+    tableDiv.innerHTML = "" 
+    
+    
+    let total = 0
+
+    for (let x = 1; x <= numberValue; x++) {
+      total = total + x  
+      let para = "<p>" + x + "</p>"
+      tableDiv.innerHTML += para
+    }
+
+
+    tableDiv.innerHTML += "<p><b>Sum = " + total + "</b></p>"
+  }
+  
+  sumBtn.addEventListener("click", renderSum)
+</script>
+
+</body>
+</html>

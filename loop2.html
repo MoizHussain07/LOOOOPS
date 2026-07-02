@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Even Numbers Loop</h1>
+
+<input placeholder="Enter a number" id="enter_a_number" />
+<button id="even_button">Show Evens</button>
+<div id="table"></div>
+
+<script>
+  let numberInput = document.getElementById("enter_a_number")
+  let evenBtn = document.getElementById("even_button")
+  let tableDiv = document.getElementById("table")
+  
+  let renderEvens = () => {
+    let numberValue = parseInt(numberInput.value)
+    tableDiv.innerHTML = "" 
+  
+
+    for (let x = 1; x <= numberValue; x++) {
+      if (x % 2 === 0) {
+        let para = "<p>" + x + "</p>"
+        tableDiv.innerHTML += para
+      }
+    }
+  }
+  
+  evenBtn.addEventListener("click", renderEvens)
+</script>
+
+</body>
+</html>
